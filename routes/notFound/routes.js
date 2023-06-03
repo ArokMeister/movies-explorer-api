@@ -1,5 +1,5 @@
 const notFoundRoutes = require('express').Router();
-const handleNotFoundRoutes = require('./controller');
+const handleNotFoundRoutes = require('../../components/notFound/controller');
 
 notFoundRoutes.use('*', handleNotFoundRoutes);
 
