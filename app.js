@@ -9,8 +9,8 @@ const router = require('./routes');
 const { handleError } = require('./utils/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const cors = require('./middlewares/useCors');
+const { PORT, MONGO_URL } = require('./utils/configs');
 
-const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 const app = express();
 
 mongoose.connect(MONGO_URL, {
