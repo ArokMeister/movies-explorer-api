@@ -1,6 +1,6 @@
 const allowedCors = [
-  'https://api.movie-explorer.nomoredomains.rocks',
-  'http://api.movie-explorer.nomoredomains.rocks',
+  'https://best-movies-explorer.nomoreparties.sbs',
+  'http://best-movies-explorer.nomoreparties.sbs',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
