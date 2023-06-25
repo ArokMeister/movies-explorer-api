@@ -12,7 +12,7 @@ async function login(req, res, next) {
     const token = generateToken(payload);
     res
       .cookie('jwt', token, { maxAge: (3600000 * 24 * 7), httpOnly: true, sameSite: true })
-      .send({ message: 'Авторизация прошла успешно' });
+      .send({ message: 'Авторизация прошла успешно', user });
   } catch (err) {
     next(err);
   }
