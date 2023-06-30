@@ -11,7 +11,9 @@ async function login(req, res, next) {
     const payload = { _id: user._id };
     const token = generateToken(payload);
     res
-      .cookie('jwt', token, { maxAge: (3600000 * 24 * 7), httpOnly: true, sameSite: true })
+      .cookie('jwt', token, {
+        maxAge: (3600000 * 24 * 7), httpOnly: true, sameSite: 'none', secure: true,
+      })
       .send({ message: 'Авторизация прошла успешно', user });
   } catch (err) {
     next(err);
